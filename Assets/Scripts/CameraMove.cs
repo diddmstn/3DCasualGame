@@ -11,8 +11,9 @@ public class CameraMove : MonoBehaviour
         direction=new Vector3(0,0,speed);
     }
 
-    private void LateUpdate() 
+    private void FixedUpdate() 
     {
+        if(Time.timeScale!=0)
         transform.position +=direction;
     }
   

@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 57262647573713622}
   - component: {fileID: 8522951757527463239}
   - component: {fileID: 5919849334875991594}
-  - component: {fileID: 3732092511005870190}
+  - component: {fileID: 2657570837967296322}
+  - component: {fileID: 5796899694290365101}
   m_Layer: 2
   m_Name: CoinGold
   m_TagString: Untagged
@@ -29,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 580806857959969125}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -3.3892355, y: 2.34, z: 2.779686}
+  m_LocalPosition: {x: 0, y: 0.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -181,8 +182,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!135 &3732092511005870190
-SphereCollider:
+--- !u!114 &2657570837967296322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 580806857959969125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aae4d20aae9e139439f7e8b473196626, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &5796899694290365101
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -196,9 +209,9 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.45090213
-  m_Center: {x: 0, y: 0, z: 0.000000014901161}
+  m_Size: {x: 2.1307971, y: 3, z: 3}
+  m_Center: {x: 0.10798013, y: 0.06826198, z: -0.006405592}

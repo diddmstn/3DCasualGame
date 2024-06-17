@@ -59,7 +59,7 @@ public class PlayerController : MonoBehaviour
 
     public void OnMove(InputAction.CallbackContext context)
     {
-        if(context.phase == InputActionPhase.Performed)
+        if(context.phase == InputActionPhase.Performed&&Time.timeScale!=0)
         {
             curMoveDirection = context.ReadValue<Vector2>();
             CharacterManager.Instance.Player.OnMoveEvent?.Invoke();
@@ -72,8 +72,12 @@ public class PlayerController : MonoBehaviour
         
     }
 
-    private void OnCollisionEnter(Collision other) 
+    private void OnTriggerEnter(Collider other) 
     {
         //만약 장애물에 부딪히면, 이전 포지션으로 다시 이동해야함
+        if(other.TryGetComponent(out ICollidable collidable))
+        {
+            collidable.OnCollide();
+        }
     }
 }
