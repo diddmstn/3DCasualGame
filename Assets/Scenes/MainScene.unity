@@ -749,7 +749,7 @@ Transform:
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
   m_LocalRotation: {x: 0.4980974, y: -0.04357789, z: 0.07547913, w: 0.8627299}
-  m_LocalPosition: {x: 0, y: 15, z: 0}
+  m_LocalPosition: {x: 3.7, y: 12.5, z: -1.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -801,7 +801,7 @@ MonoBehaviour:
   - {fileID: 4636538673605707975, guid: f3370a83b98846a4d81fa98758b9f483, type: 3}
   - {fileID: 6650520656885680974, guid: 32bfee5d995fd2240a54898c91ecbc18, type: 3}
   spawn: 0
-  tileLength: 8
+  tileLength: 9
   numberOfTiles: 10
   playerTransform: {fileID: 963194228}
 --- !u!4 &1017993841
@@ -813,7 +813,7 @@ Transform:
   m_GameObject: {fileID: 1017993839}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 3.4, y: 2, z: 5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1465,7 +1465,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 334670319573554751, guid: 5897b120ab6238c49858c242aac4d34f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.4
+      value: 3.7
       objectReference: {fileID: 0}
     - target: {fileID: 334670319573554751, guid: 5897b120ab6238c49858c242aac4d34f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1473,7 +1473,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 334670319573554751, guid: 5897b120ab6238c49858c242aac4d34f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 334670319573554751, guid: 5897b120ab6238c49858c242aac4d34f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1509,11 +1509,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8119451751089256665, guid: 5897b120ab6238c49858c242aac4d34f, type: 3}
       propertyPath: m_IsTrigger
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8669787379404760460, guid: 5897b120ab6238c49858c242aac4d34f, type: 3}
       propertyPath: moveSpeed
-      value: 3
+      value: 4.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

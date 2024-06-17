@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f80e85f58fa11534192ff2d638a07c5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  respawnDelay: 0.3
+  respawnDelay: 0.5
   percent: 50
   rotationY: -90
 --- !u!65 &5489964163796942243
@@ -114,7 +114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f80e85f58fa11534192ff2d638a07c5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  respawnDelay: 0.3
+  respawnDelay: 0.5
   percent: 50
   rotationY: 90
 --- !u!65 &6166817331764660032
