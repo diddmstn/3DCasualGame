@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 
@@ -23,7 +24,12 @@ public class GameManager:MonoBehaviour
     public void GameOver()
     {
         Time.timeScale=0;
-        Debug.Log(1);
+        gameOvecrPanel.SetActive(true);
+    }
+    public void Retry()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Time.timeScale=1;
     }
 
     public void IncreaseCoin()

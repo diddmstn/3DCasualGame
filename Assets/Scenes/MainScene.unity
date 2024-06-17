@@ -768,6 +768,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.05
+  player: {fileID: 1716982598}
 --- !u!1 &1017993839
 GameObject:
   m_ObjectHideFlags: 0
@@ -885,8 +886,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4283221399
-  m_fontColor: {r: 0.5910211, g: 0.7735849, b: 0.29629755, a: 1}
+    rgba: 4294943079
+  m_fontColor: {r: 0.40566033, g: 0.6312839, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1175,7 +1176,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1649256203}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7199433}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: Retry
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1649256203
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1321,6 +1334,11 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 116
   m_CollisionDetection: 0
+--- !u!4 &1716982598 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 334670319573554751, guid: 5897b120ab6238c49858c242aac4d34f, type: 3}
+  m_PrefabInstance: {fileID: 2021956357261804855}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2086224344
 GameObject:
   m_ObjectHideFlags: 0
@@ -1387,8 +1405,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:

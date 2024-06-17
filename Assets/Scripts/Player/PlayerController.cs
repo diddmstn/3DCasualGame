@@ -79,5 +79,6 @@ public class PlayerController : MonoBehaviour
         {
             collidable.OnCollide();
         }
+        
     }
 }
