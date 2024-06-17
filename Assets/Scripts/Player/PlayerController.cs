@@ -3,13 +3,6 @@ using UnityEngine.InputSystem;
 using System.Collections;
 
 
-// public enum Rotate
-// {
-//     UP,
-//     DOWN,
-//     LEFT,
-//     RIGHT
-// }
 
 public class PlayerController : MonoBehaviour
 {
@@ -25,10 +18,9 @@ public class PlayerController : MonoBehaviour
     void Move()
     {
         this.transform.rotation =Quaternion.Euler(0,0,0);
-        
+
         Vector3 dir =new Vector3(curMoveDirection.x*transform.forward.z,0, curMoveDirection.y*transform.forward.z);
         dir *=moveSpeed;
-        Debug.Log(dir);
         StartCoroutine(Moving(dir));
       
     }
@@ -78,7 +70,10 @@ public class PlayerController : MonoBehaviour
            curMoveDirection=Vector2.zero;
         }
         
+    }
 
-
+    private void OnCollisionEnter(Collision other) 
+    {
+        //만약 장애물에 부딪히면, 이전 포지션으로 다시 이동해야함
     }
 }

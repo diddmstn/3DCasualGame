@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class CameraMove : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public float speed;
+    Vector3 direction;
+    void Start ()
     {
-        
+        direction=new Vector3(0,0,speed);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void LateUpdate() 
     {
-        
+        transform.position +=direction;
     }
+  
 }

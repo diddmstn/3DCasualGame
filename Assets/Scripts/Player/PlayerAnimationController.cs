@@ -4,7 +4,7 @@ using UnityEngine;
 public class PlayerAnimationController : MonoBehaviour
 {
     Animator animator;
-    private int IsWalking= Animator.StringToHash("jump");
+    private int IsWalking= Animator.StringToHash("Walk");
 
     private void Awake() 
     {
