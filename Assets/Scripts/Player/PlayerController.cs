@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     [Header("Move")]
     public float moveSpeed;
     Vector2 curMoveDirection;
+    Coroutine coroutine;
     
     void Start()
     {
@@ -21,7 +22,8 @@ public class PlayerController : MonoBehaviour
 
         Vector3 dir =new Vector3(curMoveDirection.x*transform.forward.z,0, curMoveDirection.y*transform.forward.z);
         dir *=moveSpeed;
-        StartCoroutine(Moving(dir));
+        if(coroutine==null)
+        coroutine= StartCoroutine(Moving(dir));
       
     }
     void Rotate(Vector2 direction)
@@ -51,10 +53,12 @@ public class PlayerController : MonoBehaviour
         Vector3 targetPosition = currentPosition+pos;
         while(true)
         {
-            transform.position= Vector3.Lerp(this.transform.position,targetPosition,1f);
+            transform.position= Vector3.Lerp(this.transform.position,targetPosition,0.8f);
             if(transform.position==targetPosition) break;
             yield return null;
         }
+
+        coroutine=null;
     }
 
     public void OnMove(InputAction.CallbackContext context)
