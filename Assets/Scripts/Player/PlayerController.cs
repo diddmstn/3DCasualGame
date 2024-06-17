@@ -1,5 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System.Collections;
+
 
 // public enum Rotate
 // {
@@ -14,28 +16,21 @@ public class PlayerController : MonoBehaviour
     [Header("Move")]
     public float moveSpeed;
     Vector2 curMoveDirection;
-    CharacterController controller;
-    Rigidbody rb;
-    void Awake()
-    {
-        rb = GetComponent<Rigidbody>();
-        controller=GetComponent<CharacterController>();
-    }
+    
     void Start()
     {
         CharacterManager.Instance.Player.OnMoveEvent+=Move;
     }
-    // private void Update() 
-    // {
-    //     Move();
-    // }
- 
+   
     void Move()
     {
-        Vector3 dir = transform.forward *curMoveDirection.y+-transform.right*curMoveDirection.x;
-
+        this.transform.rotation =Quaternion.Euler(0,0,0);
+        
+        Vector3 dir =new Vector3(curMoveDirection.x*transform.forward.z,0, curMoveDirection.y*transform.forward.z);
         dir *=moveSpeed;
-        transform.Translate(dir);
+        Debug.Log(dir);
+        StartCoroutine(Moving(dir));
+      
     }
     void Rotate(Vector2 direction)
     {
@@ -58,14 +53,25 @@ public class PlayerController : MonoBehaviour
         
         
     }
+    IEnumerator Moving(Vector3 pos)
+    {
+        Vector3 currentPosition = transform.position;
+        Vector3 targetPosition = currentPosition+pos;
+        while(true)
+        {
+            transform.position= Vector3.Lerp(this.transform.position,targetPosition,1f);
+            if(transform.position==targetPosition) break;
+            yield return null;
+        }
+    }
+
     public void OnMove(InputAction.CallbackContext context)
     {
         if(context.phase == InputActionPhase.Performed)
         {
             curMoveDirection = context.ReadValue<Vector2>();
-            Rotate(curMoveDirection);
-           // Move();
             CharacterManager.Instance.Player.OnMoveEvent?.Invoke();
+            Rotate(curMoveDirection);
         }
         else if(context.phase == InputActionPhase.Canceled)
         {
