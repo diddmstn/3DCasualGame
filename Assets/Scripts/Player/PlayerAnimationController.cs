@@ -18,6 +18,14 @@ public class PlayerAnimationController : MonoBehaviour
     private void Move()
     {
         animator.SetBool(IsWalking,true);
+        Invoke("MoveEnd",0.45f);
     }
+
+    private void MoveEnd()
+    {
+        animator.SetBool(IsWalking,false);
+
+    }
+   
 
 }
